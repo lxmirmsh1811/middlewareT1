@@ -35,15 +35,14 @@ connection.connect(function(err){
   console.log('Connected..');
 });
 
-app.post('/', function(req, res){
-  var amt = req.body.eu;
-  var name = req.body.txt;
-  var cur = req.body.input;
-  var converted = req.body.converted;
+app.post('/save', function(req, res){
+  var convertSave = req.body;
+  console.log(convertSave);
   //var sql = "INSERT INTO `converter`(`euro_amount`, `customer`, `currency`, `converted_amount`)VALUES ('"+amt+"','"+name+"','"+cur+"','"+converted+"')";
-  connection.query('INSERT INTO converter middleware.converter (converter.euro_amount, converter.customer, converter.currency, converter.converted_amount) VALUES (?,?,?)',amt, name, cur, converted, function(err, result){
+  var sql = "INSERT INTO converter SET ?"
+  connection.query(sql,convertSave, function(err, result){
     if(err) console.log(err);
-    console.log("rows updated!");
+    res.send("save succesful");
   });
 });
 //connection.end();

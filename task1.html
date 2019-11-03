@@ -35,19 +35,19 @@
   <body>
     <div class = "container";>
     <h1 id="h1">Converter Form (WS 2019) </h1>
-    <form class = "clear">
+    <form method = "POST" action = "/save" name = "clear">
 
 
-      <label for = "eu">Euro Amount:</label>  <input type ="number" id = "eu"/><br><br>
+      <label for = "eu">Euro Amount:</label>  <input step = "any" type ="number" name= "euro_amount" id = "eu"/><br><br>
 
-      <label for ="txt">Customer:</label> <input type ="textbox" id = "txt"/><br><br>
-      <label for = "input">Currency</label> <select id = "input">
+      <label for ="txt">Customer:</label> <input type ="textbox" name="customer" id = "txt"/><br><br>
+      <label for = "input">Currency</label> <select name= "currency" id = "input">
                   <option value = "usd">USD</option>
                   <option value = "cad">CAD</option>
                   <option value = "inr">INR</option>
                </select><br><br>
-      <label for = "converted"></label><input type = "number" id = "converted"><br><br>
-      <input type = "button" value = "Convert" onclick="convert()"/>
+      <label for = "converted"></label><input step = "any" type = "number" name = "converted_amount" id = "converted"><br><br>
+      <input type = "submit" value = "Convert" onclick="convert()"/>
      <input type = "button" value = "Reset" onclick = "reset()"/>
 
     </form><br>
