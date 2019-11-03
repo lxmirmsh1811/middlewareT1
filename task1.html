@@ -2,8 +2,6 @@
 <html>
   <head>
      <title>Converter</title>
-    <!--<script type = "text/javascript" src = "task.js">
-   </script>-->
      <style>
        .container{
          background-color: #E4D1E4;
@@ -31,25 +29,8 @@
          text-align:right;
        }
      </style>
-     <script>
-
-     function convert(){
-       var val = document.getElementById("eu").value;
-       var selected_value = document.getElementById("input").value;
-       var ans;
-
-       if (selected_value == "usd") ans = (val * 1.11).toFixed(2);
-       if (selected_value == "cad") ans = (val * 1.45).toFixed(2);
-       if (selected_value == "inr") ans = val * 78.53.toFixed(2);
-       document.getElementById("converted").value = ans
-
-     }
-
-     function reset(){
-       document.getElementById('clear').reset();
-     }
-
-   </script>
+    <script type = "text/javascript" src = "task.js">
+    </script>
   </head>
   <body>
     <div class = "container";>
