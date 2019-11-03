@@ -11,5 +11,5 @@ function convert(){
 }
 
 function reset(){
-  document.getElementById('clear').reset();
+  document.getElementByID('clear').reset();
 }
